@@ -157,7 +157,7 @@
 
     /* Theme Colors */
     /* Primary Color */
-    --color-one:                        #D94F2A;
+    --color-one:                        #c85e19;
     --color-one-rgb:                    185, 8, 8;
 
     /* Index 4 */
@@ -274,7 +274,7 @@
 
 
     --link-color:                      #FFFFFF;
-    --link-color-hover:                #D94F2A;
+    --link-color-hover:                #c85e19;
     
     --gradient-color-from: #43FFEC;
     --gradient-color-center: #FFB84D;
