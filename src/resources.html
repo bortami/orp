@@ -31,35 +31,12 @@
 
     <!-- Page Title -->
     <title>
-      Dust and Run Photos | Finish Line Photos OKC | Race Director
-      Resources
+      Dust and Run Photos | Finish Line Photos OKC | Race Director Resources
     </title>
 
     <!-- Styles Include -->
     <link rel="stylesheet" href="./assets/css/main.min.css" />
-    <!-- MailerLite Universal -->
-    <script>
-      (function (w, d, e, u, f, l, n) {
-        (w[f] =
-          w[f] ||
-          function () {
-            (w[f].q = w[f].q || []).push(arguments);
-          }),
-          (l = d.createElement(e)),
-          (l.async = 1),
-          (l.src = u),
-          (n = d.getElementsByTagName(e)[0]),
-          n.parentNode.insertBefore(l, n);
-      })(
-        window,
-        document,
-        "script",
-        "https://assets.mailerlite.com/js/universal.js",
-        "ml"
-      );
-      ml("account", "1528737");
-    </script>
-    <!-- End MailerLite Universal -->
+  
     <!-- Google tag (gtag.js) -->
     <script
       async
@@ -531,13 +508,40 @@
                   </div>
 
                   <div class="wptb-newsletter-box">
-                    <div class="wptb-newsletter-box--inner">
+                    <div
+                      class="wptb-newsletter-box--inner"
+                      id="newsletter-container"
+                    >
                       <h6 class="widget-title">
                         Sign up for all the latest <br />
                         news and offers
                       </h6>
-                      <div class="ml-embedded" data-form="FKVuv4"></div>
+                      <form id="newsletter-form" method="post">
+                        <div class="form-group">
+                          <input
+                            type="email"
+                            name="email"
+                            class="form-control"
+                            placeholder="Enter your email"
+                            required
+                          />
+                        </div>
+                        <button type="submit" class="btn btn-two">
+                          <span class="btn-wrap">
+                            <span class="text-first">Subscribe</span>
+                            <span class="text-second"
+                              ><i class="bi bi-arrow-up-right"></i>
+                              <i class="bi bi-arrow-up-right"></i
+                            ></span>
+                          </span>
+                        </button>
+                      </form>
                     </div>
+                    <div
+                      id="newsletter-response"
+                      role="status"
+                      aria-live="polite"
+                    ></div>
                   </div>
                 </div>
               </div>
@@ -567,7 +571,8 @@
                   "
                 >
                   <img
-                    src="./assets/img/RRCA.2020.Member-Icon.png" alt="RRCA Member Icon"
+                    src="./assets/img/RRCA.2020.Member-Icon.png"
+                    alt="RRCA Member Icon"
                     style="max-width: 75px"
                   />
                   <a
@@ -575,7 +580,8 @@
                     target="_blank"
                   >
                     <img
-                      src="https://www.racedirectorshq.com/listings/a79cb7a4-c6c1-400b-8b09-032cb715d997/badges/light/stacked/" alt="Race Directors HQ Icon"
+                      src="https://www.racedirectorshq.com/listings/a79cb7a4-c6c1-400b-8b09-032cb715d997/badges/light/stacked/"
+                      alt="Race Directors HQ Icon"
                       style="max-width: 133px; max-height: 110px"
                   /></a>
                 </div>
@@ -598,19 +604,22 @@
                   <a
                     href="https://www.facebook.com/dustandrunphotos"
                     class="bi bi-facebook"
-                  ><span style="display: none;">Facebook</span></a>
+                    ><span style="display: none">Facebook</span></a
+                  >
                 </li>
                 <li>
                   <a
                     href="https://www.instagram.com/dustandrunphotos"
                     class="bi bi-instagram"
-                  ><span style="display: none;">Instagram</span></a>
+                    ><span style="display: none">Instagram</span></a
+                  >
                 </li>
                 <li>
                   <a
                     href="https://www.linkedin.com/in/bortami"
                     class="bi bi-linkedin"
-                  ><span style="display: none;">LinkedIn</span></a>
+                    ><span style="display: none">LinkedIn</span></a
+                  >
                 </li>
               </ul>
             </div>
@@ -655,5 +664,17 @@
     <!-- Theme Custom JS -->
     <script src="./assets/js/theme.min.js"></script>
 
+    <!-- HubSpot Form Handlers -->
+    <script src="./assets/js/hubspot-form.min.js"></script>
+
+    <!-- Start of HubSpot Embed Code -->
+    <script
+      type="text/javascript"
+      id="hs-script-loader"
+      async
+      defer
+      src="//js-na2.hs-scripts.com/242871179.js"
+    ></script>
+    <!-- End of HubSpot Embed Code -->
   </body>
 </html>

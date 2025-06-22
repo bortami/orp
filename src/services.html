@@ -36,29 +36,7 @@
 
     <!-- Styles Include -->
     <link rel="stylesheet" href="./assets/css/main.min.css" />
-    <!-- MailerLite Universal -->
-    <script>
-      (function (w, d, e, u, f, l, n) {
-        (w[f] =
-          w[f] ||
-          function () {
-            (w[f].q = w[f].q || []).push(arguments);
-          }),
-          (l = d.createElement(e)),
-          (l.async = 1),
-          (l.src = u),
-          (n = d.getElementsByTagName(e)[0]),
-          n.parentNode.insertBefore(l, n);
-      })(
-        window,
-        document,
-        "script",
-        "https://assets.mailerlite.com/js/universal.js",
-        "ml"
-      );
-      ml("account", "1528737");
-    </script>
-    <!-- End MailerLite Universal -->
+
     <!-- Google tag (gtag.js) -->
     <script
       async
@@ -320,8 +298,7 @@
         <div class="social-box style-square">
           <ul>
             <li>
-              <a
-                href="https://www.facebook.com/dustandrunphotos"
+              <a href="https://www.facebook.com/dustandrunphotos"
                 ><i class="bi bi-facebook"></i
               ></a>
             </li>
@@ -702,15 +679,7 @@
                           </div>
                         </div>
                       </div>
-                      <em>
-                        <p
-                          class="wptb-item--description"
-                          style="font-size: 11px"
-                        >
-                          You get a link to the gallery to distribute, but do
-                          not receive image files or usage rights unless
-                          purchased separately.<br /></p
-                      ></em>
+
                       <p class="wptb-item--description">
                         <strong>Best For:</strong> Small to mid-size races with
                         tight budgets or those who want to provide photo access
@@ -811,13 +780,6 @@
                         </div>
                       </div>
 
-                      <p class="wptb-item--description" style="font-size: 11px">
-                        You receive non-exclusive, perpetual rights to use all
-                        delivered photos for social media, your race website,
-                        printed materials, and email newsletters, excluding
-                        commercial resale or third-party licensing without a
-                        separate commercial license.
-                      </p>
                       <p class="wptb-item--description">
                         <strong>Best For:</strong> Races that want marketing
                         content and full access to their images without limiting
@@ -920,13 +882,6 @@
                         </div>
                       </div>
 
-                      <p class="wptb-item--description" style="font-size: 11px">
-                        You receive perpetual, non-exclusive commercial rights
-                        to use all photos for race promotion, sponsor recap, and
-                        publication across digital and print channels, with
-                        sponsors permitted to use branded images for advertising
-                        and social media.
-                      </p>
                       <p class="wptb-item--description">
                         <strong>Best For:</strong>Events with sponsor contracts,
                         large community visibility, or those needing fast
@@ -958,15 +913,18 @@
           <div class="wptb-form--wrapper">
             <div class="row">
               <div class="col-lg-8 offset-lg-2">
-                <!-- Elfsight Form Builder |  Form Builder -->
                 <script
-                  src="https://static.elfsight.com/platform/platform.js"
-                  async
+                  charset="utf-8"
+                  type="text/javascript"
+                  src="//js-na2.hsforms.net/forms/embed/v2.js"
                 ></script>
-                <div
-                  class="elfsight-app-18c9126f-fd75-435f-a44a-3f17762f8893"
-                  data-elfsight-app-lazy
-                ></div>
+                <script>
+                  hbspt.forms.create({
+                    portalId: "242871179",
+                    formId: "b018d2d4-5dbb-4f42-b025-5a652a0e5ce7",
+                    region: "na2",
+                  });
+                </script>
               </div>
             </div>
           </div>
@@ -1010,13 +968,40 @@
                   </div>
 
                   <div class="wptb-newsletter-box">
-                    <div class="wptb-newsletter-box--inner">
+                    <div
+                      class="wptb-newsletter-box--inner"
+                      id="newsletter-container"
+                    >
                       <h6 class="widget-title">
                         Sign up for all the latest <br />
                         news and offers
                       </h6>
-                      <div class="ml-embedded" data-form="FKVuv4"></div>
+                      <form id="newsletter-form" method="post">
+                        <div class="form-group">
+                          <input
+                            type="email"
+                            name="email"
+                            class="form-control"
+                            placeholder="Enter your email"
+                            required
+                          />
+                        </div>
+                        <button type="submit" class="btn btn-two">
+                          <span class="btn-wrap">
+                            <span class="text-first">Subscribe</span>
+                            <span class="text-second"
+                              ><i class="bi bi-arrow-up-right"></i>
+                              <i class="bi bi-arrow-up-right"></i
+                            ></span>
+                          </span>
+                        </button>
+                      </form>
                     </div>
+                    <div
+                      id="newsletter-response"
+                      role="status"
+                      aria-live="polite"
+                    ></div>
                   </div>
                 </div>
               </div>
@@ -1045,7 +1030,8 @@
                     "
                   >
                     <img
-                      src="./assets/img/RRCA.2020.Member-Icon.png" alt="RRCA Member Icon"
+                      src="./assets/img/RRCA.2020.Member-Icon.png"
+                      alt="RRCA Member Icon"
                       style="max-width: 75px"
                     />
                     <a
@@ -1053,7 +1039,8 @@
                       target="_blank"
                     >
                       <img
-                        src="https://www.racedirectorshq.com/listings/a79cb7a4-c6c1-400b-8b09-032cb715d997/badges/light/stacked/" alt="Race Directors HQ Icon"
+                        src="https://www.racedirectorshq.com/listings/a79cb7a4-c6c1-400b-8b09-032cb715d997/badges/light/stacked/"
+                        alt="Race Directors HQ Icon"
                         style="max-width: 133px; max-height: 110px"
                     /></a>
                   </div>
@@ -1077,19 +1064,22 @@
                   <a
                     href="https://www.facebook.com/dustandrunphotos"
                     class="bi bi-facebook"
-                  ><span style="display: none;">Facebook</span></a>
+                    ><span style="display: none">Facebook</span></a
+                  >
                 </li>
                 <li>
                   <a
                     href="https://www.instagram.com/dustandrunphotos"
                     class="bi bi-instagram"
-                  ><span style="display: none;">Instagram</span></a>
+                    ><span style="display: none">Instagram</span></a
+                  >
                 </li>
                 <li>
                   <a
                     href="https://www.linkedin.com/in/bortami"
                     class="bi bi-linkedin"
-                  ><span style="display: none;">LinkedIn</span></a>
+                    ><span style="display: none">LinkedIn</span></a
+                  >
                 </li>
               </ul>
             </div>
@@ -1140,5 +1130,18 @@
 
     <!-- Theme Custom JS -->
     <script src="./assets/js/theme.min.js"></script>
+
+    <!-- HubSpot Form Handlers -->
+    <script src="./assets/js/hubspot-form.min.js"></script>
+
+    <!-- Start of HubSpot Embed Code -->
+    <script
+      type="text/javascript"
+      id="hs-script-loader"
+      async
+      defer
+      src="//js-na2.hs-scripts.com/242871179.js"
+    ></script>
+    <!-- End of HubSpot Embed Code -->
   </body>
 </html>

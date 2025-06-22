@@ -36,29 +36,6 @@
 
     <!-- Styles Include -->
     <link rel="stylesheet" href="./assets/css/main.min.css" />
-    <!-- MailerLite Universal -->
-    <script>
-      (function (w, d, e, u, f, l, n) {
-        (w[f] =
-          w[f] ||
-          function () {
-            (w[f].q = w[f].q || []).push(arguments);
-          }),
-          (l = d.createElement(e)),
-          (l.async = 1),
-          (l.src = u),
-          (n = d.getElementsByTagName(e)[0]),
-          n.parentNode.insertBefore(l, n);
-      })(
-        window,
-        document,
-        "script",
-        "https://assets.mailerlite.com/js/universal.js",
-        "ml"
-      );
-      ml("account", "1528737");
-    </script>
-    <!-- End MailerLite Universal -->
 
     <!-- Google tag (gtag.js) -->
     <script
@@ -88,7 +65,8 @@
           <div class="d-flex align-items-center justify-content-between">
             <!-- Left Part -->
             <div class="header_left_part d-flex align-items-center">
-              <a href="/" class="light_logo"
+              <div class="logo">
+                <a href="/" class="light_logo"
                   ><img
                     src="./assets/img/orp-logo-type.png"
                     alt="logo"
@@ -387,15 +365,100 @@
               </div>
 
               <div class="col-lg-7">
-                <!-- Elfsight Form Builder |  Form Builder -->
-                <script
-                  src="https://static.elfsight.com/platform/platform.js"
-                  async
-                ></script>
-                <div
-                  class="elfsight-app-18c9126f-fd75-435f-a44a-3f17762f8893"
-                  data-elfsight-app-lazy
-                ></div>
+                <div id="form-container">
+                  >
+                  <form id="hubspot-form" class="wptb-form" novalidate>
+                    <div class="wptb-form--inner">
+                      <div class="row">
+                        <!-- First Name -->
+                        <div class="col-lg-6 col-md-6 mb-4">
+                          <div class="form-group">
+                            <label for="firstname">First Name</label>
+                            <input
+                              type="text"
+                              id="firstname"
+                              name="firstname"
+                              class="form-control"
+                              placeholder="First name"
+                            />
+                          </div>
+                        </div>
+
+                        <!-- Last Name -->
+                        <div class="col-lg-6 col-md-6 mb-4">
+                          <div class="form-group">
+                            <label for="lastname">Last Name</label>
+                            <input
+                              type="text"
+                              id="lastname"
+                              name="lastname"
+                              class="form-control"
+                              placeholder="Last name"
+                            />
+                          </div>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="col-lg-12 col-md-12 mb-4">
+                          <div class="form-group">
+                            <label for="email"
+                              >Email <span aria-hidden="true">*</span></label
+                            >
+                            <input
+                              type="email"
+                              id="email"
+                              name="email"
+                              class="form-control"
+                              placeholder="you@example.com"
+                              required
+                              aria-required="true"
+                            />
+                          </div>
+                        </div>
+
+                        <!-- Mobile Phone -->
+                        <div class="col-lg-12 col-md-12 mb-4">
+                          <div class="form-group">
+                            <label for="mobilephone">Mobile Phone</label>
+                            <input
+                              type="tel"
+                              id="mobilephone"
+                              name="mobilephone"
+                              class="form-control"
+                              placeholder="(555) 123-4567"
+                            />
+                          </div>
+                        </div>
+
+                        <!-- Message -->
+                        <div class="col-md-12 col-lg-12 mb-4">
+                          <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea
+                              id="message"
+                              name="message"
+                              class="form-control"
+                              placeholder="Tell us how we can help you"
+                              rows="5"
+                            ></textarea>
+                          </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="col-md-12 col-lg-12">
+                          <div class="wptb-item--button text-center">
+                            <button class="btn" type="submit">
+                              <span class="btn-wrap">
+                                <span class="text-first">Send Mail</span>
+                              </span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <div id="form-response" role="status" aria-live="polite"></div>
               </div>
             </div>
           </div>
@@ -439,13 +502,40 @@
                   </div>
 
                   <div class="wptb-newsletter-box">
-                    <div class="wptb-newsletter-box--inner">
+                    <div
+                      class="wptb-newsletter-box--inner"
+                      id="newsletter-container"
+                    >
                       <h6 class="widget-title">
                         Sign up for all the latest <br />
                         news and offers
                       </h6>
-                      <div class="ml-embedded" data-form="FKVuv4"></div>
+                      <form id="newsletter-form" method="post">
+                        <div class="form-group">
+                          <input
+                            type="email"
+                            name="email"
+                            class="form-control"
+                            placeholder="Enter your email"
+                            required
+                          />
+                        </div>
+                        <button type="submit" class="btn btn-two">
+                          <span class="btn-wrap">
+                            <span class="text-first">Subscribe</span>
+                            <span class="text-second"
+                              ><i class="bi bi-arrow-up-right"></i>
+                              <i class="bi bi-arrow-up-right"></i
+                            ></span>
+                          </span>
+                        </button>
+                      </form>
                     </div>
+                    <div
+                      id="newsletter-response"
+                      role="status"
+                      aria-live="polite"
+                    ></div>
                   </div>
                 </div>
               </div>
@@ -474,7 +564,8 @@
                     "
                   >
                     <img
-                      src="./assets/img/RRCA.2020.Member-Icon.png" alt="RRCA Member Icon"
+                      src="./assets/img/RRCA.2020.Member-Icon.png"
+                      alt="RRCA Member Icon"
                       style="max-width: 75px"
                     />
                     <a
@@ -482,7 +573,8 @@
                       target="_blank"
                     >
                       <img
-                        src="https://www.racedirectorshq.com/listings/a79cb7a4-c6c1-400b-8b09-032cb715d997/badges/light/stacked/" alt="Race Directors HQ Icon"
+                        src="https://www.racedirectorshq.com/listings/a79cb7a4-c6c1-400b-8b09-032cb715d997/badges/light/stacked/"
+                        alt="Race Directors HQ Icon"
                         style="max-width: 133px; max-height: 110px"
                     /></a>
                   </div>
@@ -506,19 +598,22 @@
                   <a
                     href="https://www.facebook.com/dustandrunphotos"
                     class="bi bi-facebook"
-                  ><span style="display: none;">Facebook</span></a>
+                    ><span style="display: none">Facebook</span></a
+                  >
                 </li>
                 <li>
                   <a
                     href="https://www.instagram.com/dustandrunphotos"
                     class="bi bi-instagram"
-                  ><span style="display: none;">Instagram</span></a>
+                    ><span style="display: none">Instagram</span></a
+                  >
                 </li>
                 <li>
                   <a
                     href="https://www.linkedin.com/in/bortami"
                     class="bi bi-linkedin"
-                  ><span style="display: none;">LinkedIn</span></a>
+                    ><span style="display: none">LinkedIn</span></a
+                  >
                 </li>
               </ul>
             </div>
@@ -538,29 +633,42 @@
     <script src="./assets/js/bootstrap.min.js"></script>
 
     <!-- WOW Scroll Effect -->
-    <script src="../plugins/wow/wow.min.js"></script>
+    <script src="./plugins/wow/wow.min.js"></script>
 
     <!-- Swiper Slider -->
-    <script src="../plugins/swiper/swiper-bundle.min.js"></script>
-    <script src="../plugins/swiper/swiper-gl.min.js"></script>
+    <script src="./plugins/swiper/swiper-bundle.min.js"></script>
+    <script src="./plugins/swiper/swiper-gl.min.js"></script>
 
     <!-- Odometer Counter -->
-    <script src="../plugins/odometer/appear.min.js"></script>
-    <script src="../plugins/odometer/odometer.min.js"></script>
+    <script src="./plugins/odometer/appear.min.js"></script>
+    <script src="./plugins/odometer/odometer.min.js"></script>
 
     <!-- Fancybox -->
-    <script src="../plugins/fancybox/jquery.fancybox.min.js"></script>
+    <script src="./plugins/fancybox/jquery.fancybox.min.js"></script>
 
     <!-- Flatpickr -->
-    <script src="../plugins/flatpickr/flatpickr.min.js"></script>
+    <script src="./plugins/flatpickr/flatpickr.min.js"></script>
 
     <!-- Nice Select -->
-    <script src="../plugins/nice-select/jquery.nice-select.min.js"></script>
+    <script src="./plugins/nice-select/jquery.nice-select.min.js"></script>
 
     <!-- Cursor Effect -->
-    <script src="../plugins/cursor-effect/cursor-effect.min.js"></script>
+    <script src="./plugins/cursor-effect/cursor-effect.min.js"></script>
 
     <!-- Theme Custom JS -->
     <script src="./assets/js/theme.min.js"></script>
+
+    <!-- HubSpot Form Handlers -->
+    <script src="./assets/js/hubspot-form.min.js"></script>
+
+    <!-- Start of HubSpot Embed Code -->
+    <script
+      type="text/javascript"
+      id="hs-script-loader"
+      async
+      defer
+      src="//js-na2.hs-scripts.com/242871179.js"
+    ></script>
+    <!-- End of HubSpot Embed Code -->
   </body>
 </html>

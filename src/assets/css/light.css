@@ -303,3 +303,12 @@
 .theme-style--light .wptb-slider .btn.creative .btn-wrap::before, .theme-style--light .wptb-slider .btn.creative .btn-wrap::after {
     border-color: var(--color-black);
 }
+
+.success-message {
+  color: green;
+  font-weight: bold;
+}
+.error-message {
+  color: red;
+  font-weight: bold;
+}

@@ -5,3 +5,6 @@ landing.html
 template
 plugins
 fonts
+.env
+node_modules
+public.zip
